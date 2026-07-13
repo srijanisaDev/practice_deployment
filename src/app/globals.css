@@ -682,7 +682,7 @@ h3 {
 /* Skills ------------------------------------------------------------------ */
 .skills-groups {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 22px;
 }
 
@@ -787,7 +787,7 @@ h3 {
 /* Projects ---------------------------------------------------------------- */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 24px;
 }
 
@@ -1111,6 +1111,116 @@ h3 {
 
   .cursor-glow {
     display: none;
+  }
+}
+
+/* Tablets / large phones -------------------------------------------------- */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .section {
+    padding: 72px 0 16px;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  /* Hero fits the screen without excessive empty space */
+  .hero {
+    min-height: auto;
+    padding: calc(var(--nav-height) + 20px) 0 56px;
+  }
+
+  .hero-inner {
+    gap: 30px;
+  }
+
+  .hero-text p.lead {
+    font-size: 1rem;
+  }
+
+  .photo-ring {
+    width: 220px;
+    height: 264px;
+  }
+
+  .scroll-cue {
+    display: none;
+  }
+
+  /* Tighter cards */
+  .about-text,
+  .skill-group,
+  .timeline-card,
+  .edu-item,
+  .contact-form,
+  .project-card {
+    padding: 22px;
+  }
+
+  .project-card {
+    min-height: auto;
+  }
+
+  .timeline-head {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .footer {
+    margin-top: 56px;
+  }
+
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Small phones ------------------------------------------------------------ */
+@media (max-width: 420px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 60px 0 12px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    flex: 1;
+    padding: 12px 18px;
+  }
+
+  .photo-ring {
+    width: 190px;
+    height: 230px;
+  }
+
+  .about-text,
+  .skill-group,
+  .timeline-card,
+  .edu-item,
+  .contact-form,
+  .project-card {
+    padding: 18px;
+  }
+
+  .nav {
+    width: calc(100% - 20px);
   }
 }
 
