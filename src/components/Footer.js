@@ -1,0 +1,14 @@
+import { profile } from "@/data/content";
+
+export default function Footer() {
+  const year = new Date().getFullYear();
+  return (
+    <footer className="footer">
+      <div className="container">
+        <p>
+          Designed &amp; built by {profile.name} &middot; &copy; {year}
+        </p>
+      </div>
+    </footer>
+  );
+}
